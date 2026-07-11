@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Info Nesasin</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+body {
+    min-height: 100vh;
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #fff9c4, #ffeb3b, #fbc02d);
+    overflow-x: hidden;
+}
+/* AWAN */
+.cloud {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50px;
+    opacity: 0.95;
+    filter: blur(1px);
+    z-index: 0;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: 10px;
+}
+
+.cloud::after {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    right: 10px;
+}
+
+.cloud1 {
+    width: 140px;
+    height: 50px;
+    top: 60px;
+    left: -200px;
+    animation: moveCloud 25s linear infinite;
+}
+
+.cloud2 {
+    width: 180px;
+    height: 60px;
+    top: 140px;
+    left: -300px;
+    animation: moveCloud 35s linear infinite;
+}
+
+@keyframes moveCloud {
+    from { transform: translateX(0); }
+    to { transform: translateX(120vw); }
+}
+
+/* CARD */
+.card {
+    width: 100%;
+    max-width: 340px;
+    padding: 28px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    color: #08306b;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.card {
+    width: 100%;
+    max-width: 340px;
+    padding: 28px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    /* GARIS TEPI GLOW */
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow:
+        0 0 15px rgba(255, 235, 59, 0.8),
+        0 0 30px rgba(255, 193, 7, 0.6),
+        0 12px 30px rgba(0,0,0,0.15);
+
+    text-align: center;
+    color: #08306b;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+/* MATAHARI */
+.sun {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, #fff176 20%, #ffca28 70%);
+    border-radius: 50%;
+    filter: blur(10px);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+/* TEXT */
+.title, .subtitle, .text, .highlight, .footer {
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 18px;
+    color: #0d47a1;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.text {
+    font-size: 14px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.highlight {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1565c0;
+}
+
+.footer {
+    margin-top: 24px;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* TOMBOL LINK */
+.btn-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    color: #0b2c5c;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 400px) {
+    .card {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .title { font-size: 18px; }
+    .subtitle { font-size: 15px; }
+    .text { font-size: 13px; }
+}
+</style>
+
+</head>
+<body>
+
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+
+<div class="card">
+    <div class="sun"></div>
+
+    <div class="title">Halo Selamat Datang Di SMP Negeri 1 Sindang yu lebih tau tentang kami!</div>
+
+    <div class="subtitle">
+        Info MPLS Nesasin TA 2026 - 2027 <br>
+     <br>
+    </div>
+
+    <div class="text">
+        Terima kasih sudah setia menunggu dengan sabar pastikan sudah memahami yang disampaikan.
+    </div>
+
+    <div class="text">
+        Seperti benih yang butuh waktu di tanah gelap,<br>
+        proses ini sedang menyiapkan yang terbaik untuk kita semua.
+    </div>
+
+    <div class="highlight">
+        InsyaAllah  Setiap proses akan berakhir,<br>
+        dengan lebih baik.
+    </div>
+
+    <a href="https://nesasinkuberaksi-source.github.io/NESASIN/" class="btn-link"> KLIK INI Masuk Website</a>
+
+    <div class="footer">
+        Salam manis,<br>
+        Admin Info SMP NEGERI 1 SINDANG
+    </div>
+</div>
+
+</body>
+</html>
